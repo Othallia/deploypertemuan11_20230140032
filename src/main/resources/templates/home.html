@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+<nav class="bg-blue-600 shadow-md">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="text-white font-bold text-xl tracking-wide">
+                MyDashboard
+            </div>
+            <div>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-slate-800">
+            Halo, <span class="text-blue-600" th:text="${profile.nama}">Nama User</span>!
+        </h1>
+        <p class="text-slate-500 mt-2">Selamat datang di sistem. Berikut adalah data profilmu.</p>
+    </div>
+
+    <div class="bg-white shadow rounded-xl overflow-hidden border border-slate-200">
+        <div class="px-6 py-5 border-b border-slate-200 bg-slate-50">
+            <h3 class="text-lg font-semibold text-slate-800">Informasi Akun</h3>
+        </div>
+        <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <p class="text-sm font-medium text-slate-500 mb-1">Username Sistem</p>
+                    <p class="text-lg font-semibold text-slate-800" th:text="${user.username}">username123</p>
+                </div>
+
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <p class="text-sm font-medium text-slate-500 mb-1">Nama Lengkap</p>
+                    <p class="text-lg font-semibold text-slate-800" th:text="${profile.nama}">John Doe</p>
+                </div>
+
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-100 md:col-span-2">
+                    <p class="text-sm font-medium text-slate-500 mb-1">Alamat Domisili</p>
+                    <p class="text-lg font-semibold text-slate-800" th:text="${profile.alamat}">Jl. Contoh Alamat No 123</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>
