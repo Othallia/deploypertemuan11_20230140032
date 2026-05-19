@@ -5,7 +5,7 @@
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0bfacaa0-dcc0-4c04-89b9-6c0ab672ce59" />
 
  # Halaman Home
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f0c947aa-cbea-4674-a6ea-2f60966241e5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aed033c9-cfab-471f-b8c6-284440b1da2a" />
 
 # Docker-Compose.yml (wslnya gabisa)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9017d1ba-2ad9-47c3-9d9f-53985bb7bbf7" />
