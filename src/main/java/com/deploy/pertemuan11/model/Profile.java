@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "profile")
 @AllArgsConstructor
 @NoArgsConstructor
-public class profile {
+public class Profile {
     @Id
     private String id;
     private String nama;
@@ -20,5 +20,5 @@ public class profile {
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private user user;
+    private User user;
 }
